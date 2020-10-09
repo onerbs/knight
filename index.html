@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+  <title>Knight</title>
+  <style>
+    * {
+      font: 16pt/1.25 Inter, sans-serif;
+      user-select: none;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    main {
+      margin-bottom: 2rem;
+    }
+    .controls {
+      display: grid;
+      place-items: center;
+    }
+    .controls > * {
+      padding: 0.25rem;
+      width: 100%;
+    }
+    input {
+      float: right;
+      max-width: 3rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main></main>
+  <div class="controls">
+    <label>Begin at
+      <input id="input_begin" type="number" value=0 min=0>
+    </label>
+    <label>Number of cells
+      <input id="input_cells" type="number" value=3 min=3>
+    </label>
+    <label>Offset
+      <input id="input_offset" type="number" value=2 min=1>
+    </label>
+    <label>Cell size (px)
+      <input id="input_cell_size" type="number" value=80 min=50 max=100 step=10>
+    </label>
+    <button id="trigger_button">Apply</button>
+  </div>
+  <script src="lib/global.js"></script>
+  <script src="lib/graph.js"></script>
+  <script src="lib/cycle.js"></script>
+  <script src="lib/knight.js"></script>
+</body>
+</html>
